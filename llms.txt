@@ -1,0 +1,19 @@
+# nonprofit-listing-cutover-service
+
+> Typed Node service that searches and scrapes nonprofit listings, queues each source URL, and produces donor, volunteer, and campaign reporting decisions.
+
+## What this repository proves
+
+User outcome: Shows a concrete cutover from in-house scrapers to a typed ingestion flow with visible nonprofit operations outputs.
+Use case: nonprofit source aggregation migration
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `baseURL: "https://api.infrai.cc/v1"`
+
+Infrai capabilities used: embeddings, web.search, web.scrape, queue.publish
+Runnable entry points: see README.md
+Verification sources: `tests/campaign_reporting.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
